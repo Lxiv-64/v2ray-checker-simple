@@ -1,0 +1,15 @@
+# Xray Config Checker Simple не требует сторонних Python-пакетов.
+#
+# Приложение построено целиком на стандартной библиотеке Python:
+#   - tkinter  (интерфейс и трей через ctypes)
+#   - urllib   (загрузка подписок и ядер)
+#   - threading, subprocess, socket, ssl, json, base64  (логика проверки)
+#
+# SQLite в этой версии не используется: пул серверов живёт в data/simple/pool.json.
+#
+# Единственные внешние компоненты — сами ядра Xray-core и sing-box.  Они лежат
+# в папке core/ и могут быть как скачаны приложением с официальных GitHub-релизов,
+# так и положены туда вручную.
+#
+# Требуется Python 3.8 или новее (обязателен tkinter).
+# Для сборки одного exe дополнительно нужен PyInstaller: python -m pip install pyinstaller
